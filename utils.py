@@ -77,7 +77,7 @@ class MemoryMap:
                     has_bytes = True
             if has_bytes:
                 print(
-                    f"[+] Found data in region 0x{region['start']:08x} - 0x{region['end']:08x}"
+                    f"[+] Found data in region 0x{region['start']:08x} - 0x{region['end']:08x} ({region['name']})"
                 )
                 with open(f"0x{region['start']:08x}.bin", "wb") as f:
                     f.write(bytes(data))
